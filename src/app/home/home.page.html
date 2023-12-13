@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Perimetro figuras geometricas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-select label="Figura Geométrica" placeholder="Escoja una figura geometrica" [(ngModel)]="FiguraGeometrica" (ionChange) = "fnseleccion()">
+        <ion-select-option value="circulo">Circulo</ion-select-option> 
+        <ion-select-option value="triangulo">Triangulo</ion-select-option>
+      </ion-select>
+    </ion-item>
+    </ion-list>
+    <ion-row *ngIf = "cardId == 'circulo'">
+      <app-circulo></app-circulo>
+    </ion-row>
+    <ion-row *ngIf = "cardId == 'triangulo'">
+      <app-triangulo></app-triangulo>
+    </ion-row>
+  </ion-content>
+
+

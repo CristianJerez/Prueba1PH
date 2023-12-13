@@ -1,0 +1,21 @@
+<ion-card>
+  <ion-img alt="" src="https://www.neurochispas.com/wp-content/uploads/2021/03/formula-del-perimetro-de-un-triangulo-rectangulo.png" ></ion-img>
+  <ion-card-header>
+    <ion-card-title>Triangulo</ion-card-title>
+    <ion-card-subtitle>Perimetro</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    El perimetro de un triangulo es la suma de las longitudes de sus tres lados. En otras palabras, es la medida total del contorno o borde del triangulo.
+    <ion-item>
+      <ion-input label="Lado a" type="number" placeholder="000" #ladoA></ion-input>
+      <ion-input label="Lado b" type="number" placeholder="000" #ladoB></ion-input>
+      <ion-input label="Lado c" type="number" placeholder="000" #ladoC></ion-input>
+    </ion-item>
+    <ion-button expand="block" shape="round" (click)="fnTriangulo(ladoA, ladoB, ladoC)"> CALCULAR EL PERIMETRO </ion-button>
+    <ion-text>
+      <h3>{{mensaje}}</h3>
+    </ion-text>
+  </ion-card-content>
+</ion-card>
+
